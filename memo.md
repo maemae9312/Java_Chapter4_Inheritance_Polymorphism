@@ -74,3 +74,29 @@ class Dog extends Animal {  // DogクラスはAnimalクラスを継承してい�
  this(引数)
  super(引数)
  ```
+
+ # finalキーワード
+ - クラス、メンバ変数、メソッドにつけられる装飾子。"これで最後"の意味
+    - クラス 継承ができなくなる
+    ```java
+    final class Student {
+    }
+
+    class DameStudent extends Student
+    // extendsでの継承ができない
+    ```
+
+    - メンバ変数 代入ができなくなる→定数が作れる* 定数名は全て大文字で記入する
+    ```java
+    final int BASE_NO = 1000;
+    BASE_NO = 2000;
+    // 再代入ができない
+    ```
+
+    - メソッド オーバーライドができなくなる
+    ```java
+    final void backup(){
+
+    }
+    // サブクラスで再定義
+    ```
